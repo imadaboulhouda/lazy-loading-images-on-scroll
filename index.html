@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Lazy loading images</title>
+	<style type="text/css">
+		*,*::before,*::after
+		{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box
+		}
+		img{
+			display: block;
+			width: 400px;
+			height: 200px;
+			
+		}
+		img[data-src]
+		{
+			background: #e1e1e1;
+			
+		}
+
+		div
+		{
+			height: 400px;
+    background: #e3e3e3;
+    line-height: 400px;
+    text-align: center;
+    font-weight: 700;
+    text-transform: uppercase;
+		}
+		div p {
+			text-align: center;
+			margin: 0;
+		}
+	</style>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+	<script>
+	$(function(){
+		$(window).scroll(function(){
+			$("img").each(function(){
+				if($(window).scrollTop() >= $(this).offset().top)
+				{
+					var i = new Image(),that=$(this);
+					i.onload = function(){
+						that.attr('src',that.data('src')).removeAttr('data-src')
+
+					}
+					i.src = that.data('src');
+				}	
+			})
+			
+		});
+	});
+	</script>
+</head>
+<body>
+	<div>
+		<p>Just Lazy loading on scroll</p>
+	</div>
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+	<img data-src="http://placehold.it/400x200" />
+
+	<div>
+		<p>Just Lazy loading on scroll for images</p>
+	</div>
+</body>
+</html>
